@@ -1,0 +1,139 @@
+:root {
+    --bgbody : hsl(217, 54%, 11%);
+    --bgcard: hsl(216, 50%, 16%);
+    --txtprim: hsl(215, 51%, 70%);
+    --textsecond: hsl(178, 100%, 50%);
+    --line: hsl(215, 32%, 27%);
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url(./font/Outfit-VariableFont_wght.ttf);
+    font-weight: 100 900;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bgbody);
+    color: var(--txtprim);
+    display: grid;
+    place-items: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.card {
+    width: 326px;
+    padding: 1.5em;
+    background-color: var(--bgcard);
+    border-radius: 1em;
+}
+
+.picture {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.5em;
+    margin-bottom: 1.5em;
+    background: url(./images/image-equilibrium.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.onhover {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.onhover:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Text Info */
+
+h2 {
+    color: white;
+    font-size: 1.375em;
+    font-weight: 600;
+    margin-bottom: 0.75em;
+}
+
+h2:hover {
+    color: var(--textsecond);
+    cursor: pointer;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.price>div {
+    display: flex;
+    align-items: center;
+}
+
+.price p  {
+    margin-left: 0.5em;
+}
+
+.eth p {
+    color: var(--textsecond);
+    font-weight: 600;
+}
+
+hr {
+    color: var(--line);
+    margin: 1em 0;
+}
+
+/* Author info */
+
+.authorinfo {
+    display: flex;
+    align-items: center;
+}
+
+.authorinfo img {
+    width: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 1em;
+}
+
+.authorinfo span {
+    color: white;
+}
+
+.authorinfo span:hover {
+    color: var(--textsecond);
+    cursor: pointer;
+}
+
+/* Media */
+@media (min-width: 375px) {
+    .card {
+        width: 350px;
+        padding: 1.5em;
+        background-color: var(--bgcard);
+        border-radius: 1em;
+        font-size: 1.125rem;
+    }
+}

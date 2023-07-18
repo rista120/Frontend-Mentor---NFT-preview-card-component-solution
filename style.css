@@ -100,7 +100,7 @@ h2:hover {
 }
 
 hr {
-    color: var(--line);
+    border: 1px solid var(--line);
     margin: 1em 0;
 }
 
